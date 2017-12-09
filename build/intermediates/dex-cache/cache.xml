@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\30bb7b9f9eb8a2f5828cad9201b7153960bfe940\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d2608dd6f66fbfd0095fbfd7906091804991cf5f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\919d4a1584cca3190f91842e8ed5356338b1acf4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a510df52da6402338b2debf32e637277de18c293">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b29a34d0c6c181667e58509302c024ebd8815b4f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\d84e4b263254fd22305bb8fe43f08e61f7c2a3ee\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_62ab24d4e706a0b9212598fc940669c45be7ab4f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\bbb2196ae7010abb41396ace928c57beccbfd557\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf316130fa76e3549712cd6406b948ebfb4239a3">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8cbceafe580d567b64efe443eace9876b62fd09b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\bed979c2fb6e4b3d27a9c06d3760ee2c6d13a7c3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a35c82ffb23073cc893a0f0c5246ff8fbe77c4d1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\b89e5a488c6851de3c7785e4acd20e57ad9950c9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e217cf46909cfe9e8418f06b417d8a4b76164528\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_c9ae7c0081b18061289a2ca800cfdf3f729f49fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\fd282535c31eabf0809083d1a949c1c182084608\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b13d313bb288af9e724874627730acd6b337759a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\949401987db21c4dc68b229de7f02754833d3423\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d66fb9c933f66681ebd0028566872495bca02041\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\fd282535c31eabf0809083d1a949c1c182084608\output\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.3.0_aa74545a66328698fda9668eb98dabd37889b6d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a11467cfa1a325550918300a2b6230e7d8d7432">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_491d24fcec7498ab2efb82b4773de48b7f82fd66\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.3.0_0f59aa3d4a31099bd75249fa9cd0be8191d93032\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\cheng\.android\build-cache\99de7196954fd669b90db8280d522a266031d342\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Android-FPVDemo-master\Android-FPVDemo-master\FlyBy\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6caf0ae1aaf086ac9127e528ded7b24d34134c8e\classes.dex" />
+    </item>
+
+</items>
