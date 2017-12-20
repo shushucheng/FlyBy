@@ -27,6 +27,7 @@ import dji.sdk.camera.VideoFeeder;
 import dji.sdk.codec.DJICodecManager;
 import dji.sdk.useraccount.UserAccountManager;
 
+
 public class MainActivity extends Activity implements SurfaceTextureListener,OnClickListener{
 
     private static final String TAG = MainActivity.class.getName();
@@ -36,7 +37,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
     protected DJICodecManager mCodecManager = null;
 
     protected TextureView mVideoSurface = null;
-    private Button mCaptureBtn, mShootPhotoModeBtn, mRecordVideoModeBtn, mintervalBtn;
+    private Button mCaptureBtn, mShootPhotoModeBtn, mRecordVideoModeBtn, mburstBtn, mstartintervalBtn, mstopintervalBtn;
     private ToggleButton mRecordBtn;
     private TextView recordingTime;
 
@@ -76,8 +77,10 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                         int minutes = (recordTime % 3600) / 60;
                         int seconds = recordTime % 60;
 
+
                         final String timeString = String.format("%02d:%02d", minutes, seconds);
                         final boolean isVideoRecording = cameraSystemState.isRecording();
+
 
                         MainActivity.this.runOnUiThread(new Runnable() {
 
@@ -166,10 +169,11 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
     private void initUI() {
         // init mVideoSurface
         mVideoSurface = (TextureView)findViewById(R.id.video_previewer_surface);
-
         recordingTime = (TextView) findViewById(R.id.timer);
         mCaptureBtn = (Button) findViewById(R.id.btn_capture);
-        mintervalBtn = (Button) findViewById(R.id.btn_interval);
+        mstartintervalBtn = (Button) findViewById(R.id.btn_start_interval);
+        mstopintervalBtn = (Button) findViewById(R.id.btn_stop_interval);
+        mburstBtn = (Button) findViewById(R.id.btn_burst);
         mRecordBtn = (ToggleButton) findViewById(R.id.btn_record);
         mShootPhotoModeBtn = (Button) findViewById(R.id.btn_shoot_photo_mode);
         mRecordVideoModeBtn = (Button) findViewById(R.id.btn_record_video_mode);
@@ -179,7 +183,9 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         }
 
         mCaptureBtn.setOnClickListener(this);
-        mintervalBtn.setOnClickListener(this);
+        mstartintervalBtn.setOnClickListener(this);
+        mstopintervalBtn.setOnClickListener(this);
+        mburstBtn.setOnClickListener(this);
         mRecordBtn.setOnClickListener(this);
         mShootPhotoModeBtn.setOnClickListener(this);
         mRecordVideoModeBtn.setOnClickListener(this);
@@ -267,8 +273,18 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                 break;
             }
 
-            case R.id. btn_interval:{
+            case R.id. btn_start_interval:{
                 intervalAction();
+                break;
+            }
+
+            case R.id. btn_stop_interval:{
+                stopinterval();
+                break;
+            }
+
+            case R.id. btn_burst:{
+                burstAction();
                 break;
             }
             case R.id.btn_shoot_photo_mode:{
@@ -308,6 +324,11 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
         final Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
 
+            for(int i = 3; i>0; i--)
+            {
+                showToast(String.valueOf(i));
+            }
+
             SettingsDefinitions.ShootPhotoMode photoMode = SettingsDefinitions.ShootPhotoMode.SINGLE; // Set the camera capture mode as Single mode
             camera.setShootPhotoMode(photoMode, new CommonCallbacks.CompletionCallback(){
                     @Override
@@ -327,7 +348,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                                         }
                                     });
                                 }
-                            }, 2000);
+                            }, 3000);
                         }
                     }
             });
@@ -339,8 +360,7 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
 
         final Camera camera = FPVDemoApplication.getCameraInstance();
         if (camera != null) {
-
-            SettingsDefinitions.ShootPhotoMode photoMode = SettingsDefinitions.ShootPhotoMode.INTERVAL; // Set the camera capture mode as Single mode
+            SettingsDefinitions.ShootPhotoMode photoMode = SettingsDefinitions.ShootPhotoMode.INTERVAL; // Set the camera capture mode as Interval mode
             camera.setShootPhotoMode(photoMode, new CommonCallbacks.CompletionCallback(){
                 @Override
                 public void onResult(DJIError djiError) {
@@ -352,7 +372,61 @@ public class MainActivity extends Activity implements SurfaceTextureListener,OnC
                                     @Override
                                     public void onResult(DJIError djiError) {
                                         if (djiError == null) {
-                                            showToast("take photo: success");
+                                            showToast("take interval photo: success");
+                                        } else {
+                                            showToast(djiError.getDescription());
+                                        }
+                                    }
+                                });
+                            }
+                        }, 2000);
+                    }
+                }
+            });
+        }
+    }
+
+    // Method for stopping Interval
+    private void stopinterval(){
+
+        Camera camera = FPVDemoApplication.getCameraInstance();
+        if (camera != null) {
+            camera.stopShootPhoto(new CommonCallbacks.CompletionCallback(){
+
+                @Override
+                public void onResult(DJIError djiError)
+                {
+                    if(djiError == null) {
+                        showToast("Stop intercal: success");
+                    }else {
+                        showToast(djiError.getDescription());
+                    }
+                }
+            });
+        }
+
+    }
+
+
+
+    // Method for taking burst photo
+    private void burstAction(){
+
+        final Camera camera = FPVDemoApplication.getCameraInstance();
+        if (camera != null) {
+            SettingsDefinitions.ShootPhotoMode photoMode = SettingsDefinitions.ShootPhotoMode.BURST; // Set the camera capture mode as Burst mode
+            camera.setShootPhotoMode(photoMode, new CommonCallbacks.CompletionCallback(){
+                @Override
+                public void onResult(DJIError djiError) {
+                    if (null == djiError) {
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                camera.startShootPhoto(new CommonCallbacks.CompletionCallback() {
+                                    @Override
+                                    public void onResult(DJIError djiError) {
+                                        if (djiError == null) {
+                                            showToast("take burst photo: success");
                                         } else {
                                             showToast(djiError.getDescription());
                                         }
